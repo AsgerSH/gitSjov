@@ -1,0 +1,102 @@
+package textadv1;
+
+import java.util.Scanner;
+
+public class Player{
+    // skal helst være private
+    private int playerHealth = 100;
+    private int playerAttack = 10;
+    private int playerWallet;
+    private String playerName;
+    //potion antal, super godt navn
+    private int potionWallet;
+    private int swordWallet;
+    Scanner s = new Scanner(System.in);
+    
+    public void CreatePlayer() {
+        playerHealth = 100;
+        System.out.println("Please enter your name");
+        playerName = s.next();
+        System.out.println("What a brilliant name you have");
+        System.out.println(playerName + " you start with " + playerHealth + " health and 0 Gold");
+
+    }
+
+    public int getPlayerHealth() {
+        return playerHealth;
+    }
+
+    public void setPlayerHealth(int playerHealth) {
+        this.playerHealth = playerHealth;
+    }
+
+    Room current = new Room();
+
+    public Room getCurrent() {
+        return current;
+    }
+
+    public void setCurrent(Room current) {
+        this.current = current;
+    }
+    //lav goEast, goWest and so on.   
+
+    public void goNorth() {
+        current = current.getRoomN();
+    }
+
+    public void goWest() {
+        current = current.getRoomW();
+    }
+
+    public void goEast() {
+        current = current.getRoomE();
+    }
+
+    public void goSouth() {
+        current = current.getRoomS();
+    }
+
+    public int getPlayerAttack() {
+        return playerAttack;
+    }
+
+    public void setPlayerAttack(int playerAttack) {
+        this.playerAttack = playerAttack;
+    }
+
+    public int getPlayerWallet() {
+        return playerWallet;
+    }
+
+    public void setPlayerWallet(int playerWallet) {
+        this.playerWallet = playerWallet;
+    }
+
+    public int getPotionWallet() {
+        return potionWallet;
+    }
+
+    public void setPotionWallet(int potionWallet) {
+        this.potionWallet = potionWallet;
+    }
+
+    public int getSwordWallet() {
+        return swordWallet;
+    }
+
+    public void setSwordWallet(int swordWallet) {
+        this.swordWallet = swordWallet;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
+    
+
+}
